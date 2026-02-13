@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\orozc\\Documents\\Ingenier\u00EDa en Sistemas de Computaci\u00F3n\\VII Cuatrimestre\\Programaci\u00F3n Avanzada\\Pr\u00E1ctica Programada 2\\PracticaProgramada2\\VideoGameHub\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\Universidad\\Cuatri 7\\Progra Avanzada\\PracticaProgramada2\\VideoGameHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CE7F94-0EE5-5573-0E8D-1F0E29332D67}|VideoGameHub\\VideoGameHub.csproj|c:\\users\\hp\\documents\\universidad\\cuatri 7\\progra avanzada\\practicaprogramada2\\videogamehub\\videogamehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9CE7F94-0EE5-5573-0E8D-1F0E29332D67}|VideoGameHub\\VideoGameHub.csproj|solutionrelative:videogamehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CE7F94-0EE5-5573-0E8D-1F0E29332D67}|VideoGameHub\\VideoGameHub.csproj|c:\\users\\hp\\documents\\universidad\\cuatri 7\\progra avanzada\\practicaprogramada2\\videogamehub\\videogamehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9CE7F94-0EE5-5573-0E8D-1F0E29332D67}|VideoGameHub\\VideoGameHub.csproj|solutionrelative:videogamehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\Universidad\\Cuatri 7\\Progra Avanzada\\PracticaProgramada2\\VideoGameHub\\VideoGameHub\\Program.cs",
+              "RelativeDocumentMoniker": "VideoGameHub\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\Universidad\\Cuatri 7\\Progra Avanzada\\PracticaProgramada2\\VideoGameHub\\VideoGameHub\\Program.cs*",
+              "RelativeToolTip": "VideoGameHub\\Program.cs*",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwDMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T01:35:43.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\Universidad\\Cuatri 7\\Progra Avanzada\\PracticaProgramada2\\VideoGameHub\\VideoGameHub\\appsettings.json",
+              "RelativeDocumentMoniker": "VideoGameHub\\appsettings.json",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\Universidad\\Cuatri 7\\Progra Avanzada\\PracticaProgramada2\\VideoGameHub\\VideoGameHub\\appsettings.json*",
+              "RelativeToolTip": "VideoGameHub\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-13T01:35:26.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

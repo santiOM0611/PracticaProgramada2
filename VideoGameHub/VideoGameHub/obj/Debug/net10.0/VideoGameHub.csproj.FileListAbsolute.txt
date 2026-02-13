@@ -1,0 +1,9 @@
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.AssemblyInfoInputs.cache
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.AssemblyInfo.cs
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.RazorAssemblyInfo.cache
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.RazorAssemblyInfo.cs
+C:\Users\Hp\Documents\Universidad\Cuatri 7\Progra Avanzada\PracticaProgramada2\VideoGameHub\VideoGameHub\obj\Debug\net10.0\VideoGameHub.sourcelink.json
