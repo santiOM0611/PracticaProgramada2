@@ -1,0 +1,82 @@
+﻿@model VideoGameHub.Models.Videojuego
+
+@{
+    ViewData["Title"] = "Editar Videojuego";
+}
+
+<h2 class="mb-3">Editar Videojuego</h2>
+
+<form asp-action="Editar"
+      asp-route-id="@Model.Id"
+      method="post"
+      class="row g-3">
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ImagenUrl" />
+    <input type="hidden" asp-for="DesarrolladorId" />
+
+    <div class="col-md-6">
+        <label asp-for="Titulo" class="form-label">Título</label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Genero" class="form-label">Género</label>
+        <select asp-for="Genero" class="form-select">
+            <option value="">Seleccione</option>
+            <option>Acción</option>
+            <option>Aventura</option>
+            <option>RPG</option>
+            <option>Deportes</option>
+            <option>Estrategia</option>
+            <option>Simulación</option>
+            <option>Terror</option>
+            <option>Puzzle</option>
+        </select>
+        <span asp-validation-for="Genero" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Plataforma" class="form-label">Plataforma</label>
+        <select asp-for="Plataforma" class="form-select">
+            <option value="">Seleccione</option>
+            <option>PC</option>
+            <option>PlayStation 5</option>
+            <option>Xbox Series X/S</option>
+            <option>Nintendo Switch</option>
+            <option>Multiplataforma</option>
+        </select>
+        <span asp-validation-for="Plataforma" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Precio" class="form-label">Precio</label>
+        <input asp-for="Precio" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label class="form-label">Desarrollador</label>
+        <select asp-for="DesarrolladorId" class="form-select">
+            <option value="">Seleccione un desarrollador</option>
+            @foreach (var dev in ViewBag.Desarrolladores as List<VideoGameHub.Models.Desarrollador>)
+            {
+                <option value="@dev.Id">@dev.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">
+            Guardar cambios
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

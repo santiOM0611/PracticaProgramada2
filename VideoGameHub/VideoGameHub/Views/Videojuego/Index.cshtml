@@ -1,0 +1,57 @@
+﻿@model List<VideoGameHub.Models.Videojuego>
+
+@{
+    ViewData["Title"] = "Videojuegos";
+}
+
+<h2 class="mb-3">Catálogo de Videojuegos</h2>
+
+<a asp-action="Crear" class="btn btn-success mb-3">
+    Registrar nuevo videojuego
+</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Plataforma</th>
+            <th>Precio</th>
+            <th>Desarrollador</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var videojuego in Model)
+        {
+            <tr>
+                <td>@videojuego.Titulo</td>
+                <td>@videojuego.Genero</td>
+                <td>@videojuego.Plataforma</td>
+                <td>$@videojuego.Precio.ToString("N2")</td>
+                <td>@videojuego.Desarrollador?.Nombre</td>
+                <td>
+                    <a asp-action="Detalle"
+                       asp-route-id="@videojuego.Id"
+                       class="btn btn-primary btn-sm">
+                        Ver detalle
+                    </a>
+                    <a asp-action="Editar"
+                       asp-route-id="@videojuego.Id"
+                       class="btn btn-warning btn-sm">
+                        Editar
+                    </a>
+                    <form asp-action="Eliminar"
+                          asp-route-id="@videojuego.Id"
+                          method="post"
+                          style="display:inline;"
+                          onsubmit="return confirm('¿Está seguro de eliminar este videojuego?');">
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Eliminar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

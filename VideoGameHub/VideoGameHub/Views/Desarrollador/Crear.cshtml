@@ -1,0 +1,47 @@
+﻿@model VideoGameHub.Models.Desarrollador
+
+@{
+    ViewData["Title"] = "Crear Desarrollador";
+}
+
+<h2 class="mb-3">Crear Desarrollador</h2>
+
+<form asp-action="Crear" method="post" class="row g-3">
+
+    <div class="col-md-6">
+        <label asp-for="Nombre" class="form-label">Nombre</label>
+        <input asp-for="Nombre" class="form-control" placeholder="Ej: Nintendo, Rockstar Games" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Pais" class="form-label">País</label>
+        <input asp-for="Pais" class="form-control" placeholder="Ej: Japón, Estados Unidos" />
+        <span asp-validation-for="Pais" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="AnoFundacion" class="form-label">Año de Fundación</label>
+        <input asp-for="AnoFundacion" type="number" class="form-control" placeholder="Ej: 1985" />
+        <span asp-validation-for="AnoFundacion" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="SitioWeb" class="form-label">Sitio Web (opcional)</label>
+        <input asp-for="SitioWeb" class="form-control" placeholder="https://www.ejemplo.com" />
+        <span asp-validation-for="SitioWeb" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">
+            Guardar
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

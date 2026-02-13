@@ -1,0 +1,75 @@
+﻿@model VideoGameHub.Models.Videojuego
+
+@{
+    ViewData["Title"] = "Detalle del Videojuego";
+}
+
+<h2 class="mb-3">Detalle del Videojuego</h2>
+
+<div class="card shadow" style="max-width: 800px;">
+    <div class="row g-0">
+
+        <!-- Imagen -->
+        <div class="col-md-4">
+            <img src="@(string.IsNullOrEmpty(Model.ImagenUrl)
+                                                          ? "/images/videojuegos/default.png"
+                                                          : Model.ImagenUrl)"
+                 class="img-fluid rounded-start"
+                 alt="Imagen de @Model.Titulo"
+                 style="height: 100%; object-fit: cover;" />
+        </div>
+
+        <div class="col-md-8">
+            <div class="card-body">
+                <h4 class="card-title">@Model.Titulo</h4>
+
+                <p class="card-text">
+                    <strong>Género:</strong> @Model.Genero <br />
+                    <strong>Plataforma:</strong> @Model.Plataforma <br />
+                    <strong>Precio:</strong> $@Model.Precio.ToString("N2") <br />
+                    <strong>Desarrollador:</strong> @Model.Desarrollador?.Nombre
+                </p>
+
+                <hr />
+
+                <h5>💬 Comentarios (@Model.Comentarios.Count)</h5>
+
+                @if (Model.Comentarios.Any())
+                {
+                    <div class="list-group mb-3">
+                        @foreach (var comentario in Model.Comentarios.OrderByDescending(c => c.Fecha))
+                        {
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">
+                                        @for (int i = 0; i < comentario.Valoracion; i++)
+                                        {
+                                            <span>⭐</span>
+                                        }
+                                    </h6>
+                                    <small>@comentario.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+                                </div>
+                                <p class="mb-1">@comentario.TextoComentario</p>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">No hay comentarios aún.</p>
+                }
+
+                <a asp-controller="Comentario"
+                   asp-action="Crear"
+                   asp-route-videojuegoId="@Model.Id"
+                   class="btn btn-success btn-sm">
+                    Agregar comentario
+                </a>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    Volver
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

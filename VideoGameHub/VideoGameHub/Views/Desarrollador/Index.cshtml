@@ -1,0 +1,55 @@
+﻿@model List<VideoGameHub.Models.Desarrollador>
+
+@{
+    ViewData["Title"] = "Desarrolladores";
+}
+
+<h2 class="mb-3">Desarrolladores de Videojuegos</h2>
+
+<a asp-action="Crear" class="btn btn-success mb-3">
+    Registrar nuevo desarrollador
+</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>País</th>
+            <th>Año de Fundación</th>
+            <th>Videojuegos</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var desarrollador in Model)
+        {
+            <tr>
+                <td>@desarrollador.Nombre</td>
+                <td>@desarrollador.Pais</td>
+                <td>@desarrollador.AnoFundacion</td>
+                <td>@desarrollador.Videojuegos.Count</td>
+                <td>
+                    <a asp-action="Detalle"
+                       asp-route-id="@desarrollador.Id"
+                       class="btn btn-primary btn-sm">
+                        Ver detalle
+                    </a>
+                    <a asp-action="Editar"
+                       asp-route-id="@desarrollador.Id"
+                       class="btn btn-warning btn-sm">
+                        Editar
+                    </a>
+                    <form asp-action="Eliminar"
+                          asp-route-id="@desarrollador.Id"
+                          method="post"
+                          style="display:inline;"
+                          onsubmit="return confirm('¿Está seguro de eliminar este desarrollador?');">
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Eliminar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
